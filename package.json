@@ -4,14 +4,24 @@
   "description": "dashboard-web",
   "main": "index.js",
   "scripts": {
-    "server": "json-server --watch db.json --port 5000",
+    "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix client",
-    "dev":"concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "chinmaya agrawal",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/icons": "^4.11.2",
+    "@okta/okta-react": "^5.1.2",
+    "@okta/okta-signin-widget": "^5.7.0",
+    "axios": "^0.21.1",
     "concurrently": "^6.1.0",
-    "json-server": "^0.16.3"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-router": "^0.0.1",
+    "graphql": "^15.5.0",
+    "json-server": "^0.16.3",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
